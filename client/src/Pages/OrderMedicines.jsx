@@ -177,22 +177,22 @@ const OrderMedicines = () => {
             </div>
           </div>
           <div className={styles.right_div}>
-            <div>
+            {/* <div>
               <img
                 className={styles.imgicon}
                 src="https://cdn.iconscout.com/icon/free/png-256/prescription-1690639-1434867.png"
                 alt=""
               />
               <p>Order via Prescription</p>
-            </div>
-            <div>
+            </div> */}
+            {/* <div>
               <img
                 className={styles.imgicon2}
                 src="https://thumbs.dreamstime.com/b/no-stop-prescription-rx-recipe-icon-medicine-drugs-pills-sign-prohibited-ban-stop-symbol-no-prescription-drugs-icon-vector-153329369.jpg"
                 alt=""
               />
               <p>Don't have a Prescription?</p>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className={styles.slider_1}>
