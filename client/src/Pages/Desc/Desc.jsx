@@ -72,7 +72,7 @@ const Desc = () => {
   //slider req
   const getData2 = () => {
     axios
-      .get(`https://pharmeasylion.herokuapp.com/api/product?q=${detail2}`)
+      .get(`http://localhost:4000.com/api/product?q=${detail2}`)
       .then(({ data }) => {
         setSlider(data);
       });
@@ -81,7 +81,7 @@ const Desc = () => {
   //req for desc page
   const getData = () => {
     axios
-      .get(`https://pharmeasylion.herokuapp.com/api/product/single/${title}`)
+      .get(`http://localhost:4000.com/api/product/single/${title}`)
       .then(({ data }) => {
         setDesdata(data);
       });
@@ -100,7 +100,7 @@ const Desc = () => {
 
   const handleAddToCart = async () => {
     const res = await axios.post(
-      "https://pharmeasylion.herokuapp.com/api/cart",
+      "http://localhost:4000.com/api/cart",
       {
         productId: product_id,
         qty: Number(val),

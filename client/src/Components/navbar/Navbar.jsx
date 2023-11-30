@@ -192,7 +192,7 @@ const Navbar = () => {
     setLoading(true);
     try {
       const res = await axios.post(
-        "https://pharmeasylion.herokuapp.com/api/user/mail",
+        "http://localhost:4000/api/user/mail",
         {
           mail,
         }
@@ -216,11 +216,13 @@ const Navbar = () => {
       let otp = "";
       otp += otp1 + otp2 + otp3 + otp4;
       const user_id = localStorage.getItem("user_id");
+      console.log("Before sending OTP request");
       const res = await axios.post(
-        `https://pharmeasylion.herokuapp.com/api/user/verify/${user_id}`,
+        `http://localhost:4000/api/user/verify/${user_id}`,
         { otp: Number(otp) }
       );
-      if (res.data === "your otp has been verified!") {
+      console.log("After sending OTP request", res);
+      if (res.status === 200) {
         onClose();
         setLoading(false);
         localStorage.setItem("logIn", true);

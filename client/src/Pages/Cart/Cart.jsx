@@ -118,7 +118,7 @@ const Cart = () => {
 
   const getData2 = () => {
     axios
-      .get(`https://pharmeasylion.herokuapp.com/api/product?q=${detail2}`)
+      .get(`http://localhost:4000.com/api/product?q=${detail2}`)
       .then(({ data }) => {
         // console.log(data,"data")
         setSlider(data);
@@ -129,7 +129,7 @@ const Cart = () => {
 
   const getCartdata = async () => {
     await axios
-      .get(`https://pharmeasylion.herokuapp.com/api/cart/${UserId}`)
+      .get(`http://localhost:4000.com/api/cart/${UserId}`)
       .then(({ data }) => {
         setCartdata(data);
       });
@@ -184,7 +184,7 @@ const Cart = () => {
     const deletePro = async (user_id, product_id) => {
       try {
         const res = await axios.delete(
-          `https://pharmeasylion.herokuapp.com/api/cart/delete/${user_id}/${product_id}`
+          `http://localhost:4000.com/api/cart/delete/${user_id}/${product_id}`
         );
         getCartdata();
       } catch (err) {}

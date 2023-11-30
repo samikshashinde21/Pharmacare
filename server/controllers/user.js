@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const nodemailer = require("nodemailer");
 const userModel = require("../models/user");
 const hbs = require("handlebars");
@@ -14,87 +15,99 @@ const transport = nodemailer.createTransport({
 });
 
 const userMail = async (req, res) => {
-  const oldUser = await userModel.findOne({ mail: req.body.mail });
-  if (!oldUser) {
-    const newUser = new userModel({ ...req.body });
-    await newUser.save();
+  try {
+    const oldUser = await userModel.findOne({ mail: req.body.mail });
 
-    const content = `<div>
-                            <h1>hello</h1>
-                            <p>thank you for signing up, here is your {{otp}}</p>
-                              </div>`;
+    if (!oldUser) {
+      const newUser = new userModel({ ...req.body });
+      await newUser.save();
 
-    const template = hbs.compile(content);
+      const content = `<div>
+                          <h1>hello</h1>
+                          <p>thank you for signing up, here is your {{otp}}</p>
+                        </div>`;
 
-    const otp = Math.floor(1000 + Math.random() * 9000);
-    const newOtp = await userModel.updateOne(
-      { _id: newUser._id },
-      { $push: { otp: otp } }
-    );
+      const template = hbs.compile(content);
 
-    transport
-      .sendMail({
+      const otp = Math.floor(1000 + Math.random() * 9000);
+      await userModel.updateOne({ _id: newUser._id }, { $push: { otp: otp } });
+
+      await transport.sendMail({
         from: process.env.EMAIL,
         to: req.body.mail,
         subject: "here is your otp.",
-        // text: "hellow world 1234 monodb is good",
         html: template({ otp: otp }),
-      })
-      .then((responce) => {
-        return res.send({
-          message: "user signup successfully",
-          id: newUser._id,
-        });
       });
-  } else {
-    const content = `<div>
-                                  <h1>hello</h1>
-                                  <p>thank you for signing up, here is your {{otp}}</p>
-                              </div>`;
 
-    const template = hbs.compile(content);
+      return res.send({
+        message: "user signup successfully",
+        id: newUser._id,
+      });
+    } else {
+      const content = `<div>
+                            <h1>hello</h1>
+                            <p>thank you for signing up, here is your {{otp}}</p>
+                        </div>`;
 
-    const otp = Math.floor(1000 + Math.random() * 9000);
-    const newOtp = await userModel.updateOne(
-      { _id: oldUser._id },
-      { $push: { otp: otp } }
-    );
+      const template = hbs.compile(content);
 
-    transport
-      .sendMail({
-        from: "pharmeasy620@gmail.com",
+      const otp = Math.floor(1000 + Math.random() * 9000);
+      await userModel.updateOne({ _id: oldUser._id }, { $push: { otp: otp } });
+
+      await transport.sendMail({
+        from: process.env.EMAIL,
         to: req.body.mail,
         subject: "here is your otp.",
-        // text: "hellow world 1234 monodb is good",
         html: template({ otp: otp }),
-      })
-      .then((responce) => {
-        return res.send({
-          message: "user signup successfully",
-          id: oldUser._id,
-        });
       });
+
+      return res.send({
+        message: "user signup successfully",
+        id: oldUser._id,
+      });
+    }
+  } catch (error) {
+    console.error("Error in userMail:", error);
+    return res.status(500).send("Internal Server Error");
   }
 };
 
 async function userVerify(req, res) {
   try {
     const { id } = req.params;
-    const { otp } = req.body;
-    const otpObj = await userModel.findOne({ _id: id });
-    const otpArr = otpObj.otp;
-    if (otpArr[otpArr.length - 1] === otp) {
-      return res.send("your otp has been verified!");
-    } else {
-      return res.status(404).send("otp is wrong");
+  
+
+    // Validate if id is a valid ObjectId
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).send("Invalid ID format");
     }
-  } catch (err) {
-    console.log("err:", err);
-    return res.status(404).send("Something went wrong");
+
+    // Use email as a unique identifier instead of _id
+    const otpObj = await userModel.findOne({ email: id });
+    // console.log("fnd")
+
+    if (!otpObj) {
+      console.error(`User with email ${id} not found`);
+      return res.status(404).send("User not found");
+    }
+
+    const otpArr = otpObj.otp;
+
+    // Assuming you have the OTP value from the request body
+    const { otp } = req.body;
+    
+    if (otpArr[otpArr.length - 1] === otp) {
+      // console.log("correct otp");
+      return res.status(200).send("Your OTP has been verified!");
+      
+    } else {
+      console.error(`Incorrect OTP for user email ${id}`);
+      return res.status(400).send("Incorrect OTP");
+    }
+  } catch (error) {
+    console.error("Error in userVerify:", error);
+    return res.status(500).send("Internal Server Error");
   }
 }
-//62d7ce9fc8c9b354e8c3705b
-module.exports = { userMail, userVerify };
 
-//pharmEasy956789
-//jkoueclzmizdydcc
+module.exports = { userMail, userVerify };
