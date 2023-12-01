@@ -5,7 +5,7 @@ const AppDownload = () => {
     <div className={styles.container}>
       <div>
         <p>Simplifying Healthcare, Impacting Lives</p>
-        <p>Download the App for free</p>
+        <p>App Coming Soon</p>
         <div className={styles.appStores}>
           <div>
             <a
