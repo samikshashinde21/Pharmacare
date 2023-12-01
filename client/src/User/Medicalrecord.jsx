@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Grid, Heading, Image, Text, Divider } from "@chakra-ui/react";
+import securePaymentImage from "../Components/assets/secure_payment.jpg";
 
 const Medicalrecord = () => {
   return (
@@ -172,7 +173,7 @@ const Medicalrecord = () => {
           <Box w="100%" h="16rem" bg="white">
             <Image
               borderRadius={"21rem"}
-              src="https://www.datocms-assets.com/22250/1583380060-shield-lock-2x.png?auto=format&dpr=0.8&w=244"
+              src={securePaymentImage}
               w="20%"
               h="15%"
               mt={"0.5rem"}
@@ -204,7 +205,7 @@ const Medicalrecord = () => {
           </Box>
         </Grid>
       </Box>
-      <Divider mb={"5rem"} />
+      {/* <Divider mb={"5rem"} />
       <Box w={"80%"} m="auto">
         <Grid templateColumns="repeat(3, 1fr)" gap={8}>
           <Box w="90%" h="33rem" ml="1rem" bg="white">
@@ -228,7 +229,7 @@ const Medicalrecord = () => {
           </Box>
         </Grid>
       </Box>
-      <Divider mb={"2rem"} />
+      <Divider mb={"2rem"} /> */}
     </Box>
   );
 };

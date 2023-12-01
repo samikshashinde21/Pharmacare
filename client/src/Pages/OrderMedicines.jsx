@@ -157,7 +157,7 @@ const OrderMedicines = () => {
                 <div>
                   <div className={styles.flex_1}>
                     <p>Flat 15% Off</p>
-                    <p>1 Lakh+ Products</p>
+                    {/* <p>1 Lakh+ Products</p> */}
                     <p>Easy Returns</p>
                   </div>
                   <Heading style={{ color: "white" }} as="h4" size="md">
