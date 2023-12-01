@@ -86,7 +86,7 @@ const LabDetails = () => {
         </Box>
       </Box>
       <Services />
-      <div className="appdiv">
+      {/* <div className="appdiv">
         <div className={styles.bottom_2}>
           <div className={styles.bottom_21}>
             <img
@@ -124,7 +124,7 @@ const LabDetails = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </Box>
   );
 };

@@ -549,7 +549,7 @@ const Cart = () => {
               </p>
             </div>
           </div>
-          <div className={styles.bottom_2}>
+          {/* <div className={styles.bottom_2}>
             <div className={styles.bottom_21}>
               <img
                 src="https://assets.pharmeasy.in/web-assets/_next/icons/footerMobile.jpg"
@@ -585,7 +585,7 @@ const Cart = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </>
     );

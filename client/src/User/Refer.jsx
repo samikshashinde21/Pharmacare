@@ -156,12 +156,12 @@ const Refer = () => {
             >
               Refer and Earn
             </Text>
-            <a href="https://pharmeasy.in/help/referrals-43000349464">
+            {/* <a href="https://pharmeasy.in/help/referrals-43000349464">
               {" "}
               <Text fontSize={"2xl"} m="0.2rem 3rem 1rem 3rem" color={"blue"}>
                 Help
               </Text>
-            </a>
+            </a> */}
           </Box>
           <Image
             h={"26%"}
@@ -177,11 +177,11 @@ const Refer = () => {
             You both get EXTRA 5% OFF on the next order. Hurry, refer now!.
           </Text>
           <WrapItem>
-            <a href="https://pharmeasy.in/help/referrals-43000349464">
+            {/* <a href="https://pharmeasy.in/help/referrals-43000349464">
               <Button m={"3rem"} colorScheme="facebook">
                 Refer Now Click Here
               </Button>
-            </a>
+            </a> */}
           </WrapItem>
         </Box>
       </Box>

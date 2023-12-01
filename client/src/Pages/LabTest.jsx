@@ -509,7 +509,7 @@ export const LabTest = () => {
       <FacilitySlider />
       <Services />
 
-      <div className="appdiv">
+      {/* <div className="appdiv">
         <div className={styles.bottom_2}>
           <div className={styles.bottom_21}>
             <img
@@ -547,7 +547,7 @@ export const LabTest = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
