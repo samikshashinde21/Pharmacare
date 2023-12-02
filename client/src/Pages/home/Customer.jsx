@@ -57,7 +57,7 @@ const db = [
       "This app is a game changer for me. I am unable to go out always to buy medicinal products. Oxanto gives me the last liberty to shop essential healthcare products from home. The app is very user friendly and me being an elderly person do not find any difficulty in using it. They deliver well in time. Thanks😊"
   },
   {
-    name: "Parth Chavan",
+    name: "Shreyash Padeer",
     date: "May 29, 2023",
     content:
       "Very good app. Would recommend it to everyone requiring fast and efficient delivery of medicinal products at the doorstep."
