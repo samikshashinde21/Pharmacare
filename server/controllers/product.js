@@ -2,6 +2,7 @@ const productModel = require("../models/product");
 
 const productGet = async (req, res) => {
   const q = req.query.q;
+  // return res.send(q)
   try {
     if (q) {
       const data = await productModel.find({ ancestor: { $in: [q] } });
@@ -54,7 +55,8 @@ const singleProduct = async (req, res) => {
 
 const productsGet = async (req, res) => {
   const data = await productModel.find();
-  return res.send(data);
+  
+  return res.json(data);
 };
 
 module.exports = {
@@ -64,3 +66,4 @@ module.exports = {
   singleProduct,
   productsGet,
 };
+

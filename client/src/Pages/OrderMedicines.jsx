@@ -286,21 +286,21 @@ const OrderMedicines = () => {
             <div className={styles.slider_2_div}>
               <img src="https://consumer-app-images.pharmeasy.in/marketing/comp_3step.jpg" />
             </div>
-            <div className={styles.slider_2_div}>
+            {/* <div className={styles.slider_2_div}>
               <img src="https://consumer-app-images.pharmeasy.in/marketing/comp_india_covered.jpg" />
-            </div>
-            <div className={styles.slider_2_div}>
+            </div> */}
+            {/* <div className={styles.slider_2_div}>
               <img src="https://consumer-app-images.pharmeasy.in/marketing/comp_cod.jpg" />
-            </div>
-            <div className={styles.slider_2_div}>
+            </div> */}
+            {/* <div className={styles.slider_2_div}>
               <img
                 c
                 src="https://consumer-app-images.pharmeasy.in/marketing/comp_50lac.jpg"
               />
-            </div>
-            <div className={styles.slider_2_div}>
+            </div> */}
+            {/* <div className={styles.slider_2_div}>
               <img src="https://consumer-app-images.pharmeasy.in/marketing/comp_india_covered.jpg" />
-            </div>
+            </div> */}
           </Slider>
         </div>
         <div className={styles.slider_3}></div>

@@ -51,60 +51,60 @@ const db = [
   //   title: "Covid Essentials",
   //   link: "/products/Covid Essentials"
   // },
-  {
-    img:
-      "https://cdn01.pharmeasy.in/dam/discovery/categoryImages/b4a3a67a59783e0ca738884c9acc8e7b.png",
-    title: "Personal Care",
-    link: "/products/Personal Care"
-  },
-  {
-    img:
-      "https://cdn01.pharmeasy.in/dam/discovery/categoryImages/62e6d7551ecf3a5da1d2336c41cc0549.png",
-    title: "Health Food and Drinks",
-    link: "/products/Health Food and Drinks"
-  },
-  {
-    img:
-      "https://cdn01.pharmeasy.in/dam/discovery/categoryImages/8a45f5baa68e3b72ae631003faa97bdb.png",
-    title: "Beauty",
-    link: "/products/Beauty"
-  },
-  {
-    img:
-      "https://cdn01.pharmeasy.in/dam/discovery/categoryImages/ff5aaa03881e3016bf409f85b4e328aa.png",
-    title: "Skin Care",
-    link: "/products/Skin Care"
-  },
-  {
-    img:
-      "https://cdn01.pharmeasy.in/dam/discovery/categoryImages/68ae87e29f4a3abbb8ed69fe7ecf057c.png",
-    title: "Home Care",
-    link: "/products/Home Care"
-  },
-  {
-    img:
-      "https://cdn01.pharmeasy.in/dam/discovery/categoryImages/4209e1d247cd30fca1f619786fa3e9c1.png",
-    title: "Ayurvedic Care",
-    link: "/products/Ayurvedic Care"
-  },
+  // {
+  //   img:
+  //     "https://cdn01.pharmeasy.in/dam/discovery/categoryImages/b4a3a67a59783e0ca738884c9acc8e7b.png",
+  //   title: "Personal Care",
+  //   link: "/products/Personal Care"
+  // },
+  // {
+  //   img:
+  //     "https://cdn01.pharmeasy.in/dam/discovery/categoryImages/62e6d7551ecf3a5da1d2336c41cc0549.png",
+  //   title: "Health Food and Drinks",
+  //   link: "/products/Health Food and Drinks"
+  // },
+  // {
+  //   img:
+  //     "https://cdn01.pharmeasy.in/dam/discovery/categoryImages/8a45f5baa68e3b72ae631003faa97bdb.png",
+  //   title: "Beauty",
+  //   link: "/products/Beauty"
+  // },
+  // {
+  //   img:
+  //     "https://cdn01.pharmeasy.in/dam/discovery/categoryImages/ff5aaa03881e3016bf409f85b4e328aa.png",
+  //   title: "Skin Care",
+  //   link: "/products/Skin Care"
+  // },
+  // {
+  //   img:
+  //     "https://cdn01.pharmeasy.in/dam/discovery/categoryImages/68ae87e29f4a3abbb8ed69fe7ecf057c.png",
+  //   title: "Home Care",
+  //   link: "/products/Home Care"
+  // },
+  // {
+  //   img:
+  //     "https://cdn01.pharmeasy.in/dam/discovery/categoryImages/4209e1d247cd30fca1f619786fa3e9c1.png",
+  //   title: "Ayurvedic Care",
+  //   link: "/products/Ayurvedic Care"
+  // },
   // {
   //   img:
   //     "https://cdn01.pharmeasy.in/dam/discovery/categoryImages/7e509ee2f5413b0483d00c0b30067ee0.png",
   //   title: "Sexual Wellness",
   //   link: "/products/Sexual Wellness"
   // },
-  {
-    img:
-      "https://cdn01.pharmeasy.in/dam/discovery/categoryImages/0e9613b95131376b95bcbf92c48149b5.png",
-    title: "Fitness & Supplements",
-    link: "/products/Fitness & Supplements"
-  },
-  {
-    img:
-      "https://cdn01.pharmeasy.in/dam/discovery/categoryImages/af8d32e30757338787ca3e9267865d4f.png",
-    title: "Mother and Baby Care",
-    link: "/products/Mother and Baby Care"
-  }
+  // {
+  //   img:
+  //     "https://cdn01.pharmeasy.in/dam/discovery/categoryImages/0e9613b95131376b95bcbf92c48149b5.png",
+  //   title: "Fitness & Supplements",
+  //   link: "/products/Fitness & Supplements"
+  // },
+  // {
+  //   img:
+  //     "https://cdn01.pharmeasy.in/dam/discovery/categoryImages/af8d32e30757338787ca3e9267865d4f.png",
+  //   title: "Mother and Baby Care",
+  //   link: "/products/Mother and Baby Care"
+  // }
 ];
 
 const FeaturedBrand = () => {
@@ -118,20 +118,20 @@ const FeaturedBrand = () => {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />
   };
-  return (
-    <div className={styles.container}>
-      <Heading size="md" m="1rem" style={{ color: "#55585e" }}>
-        Featured Brands
-      </Heading>
-      <div>
-        <Slider {...settings}>
-          {db.map((el) => (
-            <FeatureCards props={el} />
-          ))}
-        </Slider>
-      </div>
-    </div>
-  );
+  // return (
+  //   <div className={styles.container}>
+  //     <Heading size="md" m="1rem" style={{ color: "#55585e" }}>
+  //       Featured Brands
+  //     </Heading>
+  //     <div>
+  //       <Slider {...settings}>
+  //         {db.map((el) => (
+  //           <FeatureCards props={el} />
+  //         ))}
+  //       </Slider>
+  //     </div>
+  //   </div>
+  // );
 };
 
 export { FeaturedBrand };

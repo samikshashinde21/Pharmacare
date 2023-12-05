@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { AppDownload } from "./AppDownload";
 import { ChooseUs } from "./ChooseUs";
 import { Customer } from "./Customer";
@@ -10,8 +11,17 @@ import { OfferCards } from "./OfferCards";
 import { PharmEasyPlus } from "./PharmEasyPlus";
 import { QAns } from "./QAns";
 import { TopSlider } from "./TopSlider";
+import axios from "axios";
+
+const fetchData = async() =>{
+  const res = await axios.get("http://localhost:4000/api/product/all");
+  console.log("res",res.data)
+}
 
 const Main = () => {
+  useEffect(()=>{
+  fetchData()
+  },[])
   return (
     <>
       <TopSlider />

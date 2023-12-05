@@ -35,12 +35,12 @@ const db = [
     title: "Get FLAT Rs.1000 OFF on booking 2 Comprehensiv...",
     code: "GRAND1000"
   },
-  {
-    img:
-      "https://cms-contents.pharmeasy.in/offer/6b979e67782-Diagnostics-02-min.png?dim=60x0&dpr=1&q=100",
-    title: "Get FLAT Rs.300 cashback on PharmEasy Labtests...",
-    code: "FIT300"
-  }
+  // {
+  //   img:
+  //     "https://cms-contents.pharmeasy.in/offer/6b979e67782-Diagnostics-02-min.png?dim=60x0&dpr=1&q=100",
+  //   title: "Get FLAT Rs.300 cashback on PharmEasy Labtests...",
+  //   code: "FIT300"
+  // }
 ];
 
 function NextArrow(props) {

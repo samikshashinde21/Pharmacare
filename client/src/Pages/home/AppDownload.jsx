@@ -33,13 +33,13 @@ const AppDownload = () => {
           </div>
         </div>
       </div>
-      <div>
+      {/* <div>
         <img
           style={{ height: "329px", width: "110%" }}
           src="https://assets.pharmeasy.in/web-assets/dist/1d1ccea7.jpg"
           alt=""
         />
-      </div>
+      </div> */}
     </div>
   );
 };

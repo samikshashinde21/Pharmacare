@@ -15,7 +15,7 @@ const Services = () => {
             <p>Trusted Labs</p>
             <Box className="about_it">
               <p>
-                Every test booked via PharmEasy is conducted by certified labs
+                Every test booked via Oxanto is conducted by certified labs
                 that are 100% verified and trustworthy.
               </p>
             </Box>
@@ -25,7 +25,7 @@ const Services = () => {
             <p>Home Visit</p>
             <Box className="about_it">
               <p>
-                With PharmEasy, you get a FREE sample pick-up* by professional
+                With Oxanto, you get a FREE sample pick-up* by professional
                 phlebotomists from your home or preferred location.
               </p>
             </Box>
@@ -45,7 +45,7 @@ const Services = () => {
             <p>Up to 70% OFF</p>
             <Box className="about_it">
               <p>
-                At PharmEasy, you save at every step! On diagnostic tests, get
+                At Oxanto, you save at every step! On diagnostic tests, get
                 up to 70% OFF on various tests and test packages.
               </p>
             </Box>

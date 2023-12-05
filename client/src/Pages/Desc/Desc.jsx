@@ -273,7 +273,7 @@ const Desc = () => {
                   <p>
                     Get extra 10% Off on Everherb, Liveasy
                     <br />
-                    PharmEasy products
+                    Oxanto products
                   </p>
                 </div>
                 <div
