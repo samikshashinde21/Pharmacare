@@ -25,7 +25,7 @@ const Product = () => {
   useEffect(() => {
     const getData = async () => {
       let res = await axios.get(
-        `http://localhost:4000.com/api/product?q=${str}`
+        `http://localhost:4000/api/product?q=${str}`
       );
       setData(res.data);
     };

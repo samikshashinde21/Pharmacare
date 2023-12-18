@@ -13,7 +13,7 @@ const ThankYou = () => {
     const moveToOrder = async () => {
       const user_id = localStorage.getItem("user_id");
       await axios.get(
-        `http://localhost:4000.com/api/cart/payment/${user_id}`
+        `http://localhost:4000/api/cart/payment/${user_id}`
       );
     };
     moveToOrder();

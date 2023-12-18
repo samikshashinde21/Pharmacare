@@ -15,13 +15,13 @@ function Payment() {
       amount: data.amount,
       currency: data.currency,
       name: value.formData.fname,
-      description: "PharmEasy.in",
+      description: "Oxanto.in",
       image: "https://pharmeasy.in/pe_logo_2x.png",
       order_id: data.id,
       handler: async (response) => {
         try {
           const verifyUrl =
-            "http://localhost:4000.com/payment/verify";
+            "http://localhost:4000/payment/verify";
           const { data } = await axios.post(verifyUrl, response);
           console.log(data);
         } catch (error) {
@@ -48,7 +48,7 @@ function Payment() {
 
   const handlePayment = async () => {
     try {
-      const orderUrl = "http://localhost:4000.com/api/payment/orders";
+      const orderUrl = "http://localhost:4000/api/payment/orders";
       const { data } = await axios.post(orderUrl, { amount: value.total });
       console.log(data);
       initPayment(data.data);

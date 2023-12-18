@@ -19,7 +19,7 @@ const Myorders = () => {
     const order = async () => {
       const user_id = localStorage.getItem("user_id");
       const res = await axios.get(
-        `http://localhost:4000.com/api/ordered/${user_id}`
+        `http://localhost:4000/api/ordered/${user_id}`
       );
       // console.log(res.data);
       setOrderlist(res.data);
