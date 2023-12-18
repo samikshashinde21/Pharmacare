@@ -24,7 +24,7 @@
                 height: "90%",
             }}
             >
-            <div style={{ padding: "20px", boxSizing: "border-box" }}>
+            <div style={{ padding: "80px", boxSizing: "border-box" }}>
                 <img
                 style={{ maxWidth: "90%", maxHeight: "90%" }}
                 src={img1} 
