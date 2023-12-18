@@ -45,62 +45,67 @@ import { useEffect } from "react";
 
 const options = [
   {
-    value: "Ecosprin 75mg Strip Of 14 Tablets",
-    label: "Ecosprin 75mg Strip Of 14 Tablets",
+    value: "Episoft cleansing lotion",
+    label: "Episoft cleansing lotion",
   },
   {
-    value: "Evion 400mg Strip of 10 Capsules",
-    label: "Evion 400mg Strip of 10 Capsules",
+    value: "Venusia Max Intensive Moisturizing Lotion, Repairs Dry Skin, Provides Soft & Smooth Skin, 300gm",
+    label: "Venusia Max Intensive Moisturizing Lotion, Repairs Dry Skin, Provides Soft & Smooth Skin, 300gm",
   },
   {
-    value: "Pan 40mg Strip of 15 Tablets",
-    label: "Pan 40mg Strip of 15 Tablets",
+    value: "Veet Pure Hair Removal Cream For Women With No Ammonia Smell, Sensitive Skin - 50 G",
+    label: "Veet Pure Hair Removal Cream For Women With No Ammonia Smell, Sensitive Skin - 50 G",
   },
   // {
   //   value: "Pharmeasy Multivitamin",
   //   label: "Pharmeasy Multivitamin",
   // },
   {
-    value: "Ecosprin 75mg Strip Of 14 Tablets",
-    label: "Ecosprin 75mg Strip Of 14 Tablets",
+    value: "Ethiglo Skin Whitening Face Wash-70 G",
+    label: "Ethiglo Skin Whitening Face Wash-70 G",
   },
   // { value: "Pharmeasy Multivitamin", label: "Pharmeasy Multivitamin" },
   {
-    value: "Grd Chocolate Whey Protein Refill Of 400 G",
-    label: "Grd Chocolate Whey Protein Refill Of 400 G",
+    value: "Nivea Aloe Mosturizing Creme Bottle Of 200 Ml",
+    label: "Nivea Aloe Mosturizing Creme Bottle Of 200 Ml",
   },
 
   {
-    value: "Evion 400mg Strip Of 10 Capsules",
-    label: "Evion 400mg Strip Of 10 Capsules",
+    value: "La Shield Fisico Sunscreen Spf 50 Matte Tube Of 50 G",
+    label: "La Shield Fisico Sunscreen Spf 50 Matte Tube Of 50 G",
   },
   {
-    value: "Neurobion Forte Tablet 30'S",
-    label: "Neurobion Forte Tablet 30'S",
+    value: "Dettol Intense Cool Bathing Soap Bar With Menthol- Buy 4 Get 1 Free - 125g Each",
+    label: "Dettol Intense Cool Bathing Soap Bar With Menthol- Buy 4 Get 1 Free - 125g Each",
   },
   {
-    value: "Supradyn Daily Multivitamin Tablets 15s",
-    label: "Supradyn Daily Multivitamin Tablets 15s",
+    value: "Lacto Calamine Daily Cleansing Face Wipes With Aloe Vera Cucumber And Vitamin E - 25 Wipes",
+    label: "Lacto Calamine Daily Cleansing Face Wipes With Aloe Vera Cucumber And Vitamin E - 25 Wipes",
   },
-  // {
-  //   value: "Pharmeasy Multivitamin",
-  //   label: "Pharmeasy Multivitamin",
-  // },
   {
-    value: "Calcimax Forte Plus Strip Of 30 Tablets",
-    label: "Calcimax Forte Plus Strip Of 30 Tablets",
+    value: "Ezee Bio-Degradable Large Garbage Bags (24 X 32 Inches) Packet Of 15",
+    label: "Ezee Bio-Degradable Large Garbage Bags (24 X 32 Inches) Packet Of 15",
   },
-  // { value: "Pharmeasy Multivitamin", label: "Pharmeasy Multivitamin" },
   {
-    value: "Ecosprin 75mg Strip Of 14 Tablets",
-    label: "Ecosprin 75mg Strip Of 14 Tablets",
+    value: "Baby Dove Rich Moisture Wipes 50 Pcs",
+    label: "Baby Dove Rich Moisture Wipes 50 Pcs",
+  },
+  { value: "Dettol Disinfectant Sanitizer Spray Bottle -Spring Blossom, 225ml)", 
+    label: "Dettol Disinfectant Sanitizer Spray Bottle -Spring Blossom, 225ml)" },
+  {
+    value: "D Acne Soft Foaming Face Wash Tube Of 100 G",
+    label: "D Acne Soft Foaming Face Wash Tube Of 100 G",
   },
 
   {
     value:
-      "Liveasy Foods Healthy Seed Mix - Blend Of 6 Fibre Rich Healthy Seeds - 200 Gms",
+      "Dettol Antiseptic Liquid Bottle Of 550 Ml",
     label:
-      "Liveasy Foods Healthy Seed Mix - Blend Of 6 Fibre Rich Healthy Seeds - 200 Gms",
+      "Dettol Antiseptic Liquid Bottle Of 550 Ml",
+  },
+  {
+    value: "Godrej Good Knight Gold Flash Mosquito Repellent (Machine + 2 Refills) - Combo Pack-1 Unit",
+    label: "Godrej Good Knight Gold Flash Mosquito Repellent (Machine + 2 Refills) - Combo Pack-1 Unit",
   },
   {
     value: "Lizol Floral Disinfectant Floor Cleaner Liquid Bottle Of 200 Ml",
@@ -115,20 +120,16 @@ const options = [
     label: "Domex Disinfectant Expert Toilet Cleaner - 500 Ml",
   },
   {
-    value: "Luxor Nano Mobile Disinfectant Cleaner - 10ml On-The-Go",
-    label: "Luxor Nano Mobile Disinfectant Cleaner - 10ml On-The-Go",
+    value:
+      "Luxor Nano Mobile Disinfectant Cleaner - 10ml On-The-Go",
+    label:
+      "Luxor Nano Mobile Disinfectant Cleaner - 10ml On-The-Go",
   },
   {
     value:
-      "Tri-Activ Disinfectant Spray For Multi-Surfaces 70% Alcohol Based - 100ml",
+      "Dettol Liquid Disinfectant For Floor Cleaner, Surface Disinfection Personal Hygiene Lime Fresh 500ml",
     label:
-      "Tri-Activ Disinfectant Spray For Multi-Surfaces 70% Alcohol Based - 100ml",
-  },
-  {
-    value:
-      "Ezee Bio-Degradable Large Garbage Bags (24 X 32 Inches) Packet Of 15",
-    label:
-      "Ezee Bio-Degradable Large Garbage Bags (24 X 32 Inches) Packet Of 15",
+      "Dettol Liquid Disinfectant For Floor Cleaner, Surface Disinfection Personal Hygiene Lime Fresh 500ml",
   },
 ];
 
@@ -283,10 +284,10 @@ const Navbar = () => {
         <div className={styles.tabContainer}>
           <div>
             <div>
-              <Link to="/orderMed">Order Medicines</Link>
+              <Link to="/allproducts">All Products</Link>
             </div>
             <div>
-              <Link to="/healthcare">Healthcare Products</Link>
+              <Link to="/healthcare">Categories</Link>
             </div>
             {/* <div>
               <Link to="/labtest">Lab tests</Link>

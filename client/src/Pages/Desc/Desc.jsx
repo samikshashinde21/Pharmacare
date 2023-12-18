@@ -153,9 +153,9 @@ const Desc = () => {
                 <img src={desData.img1} alt="" /> 
               </div>
               <div className={styles.desc_img_div2}>
-                {/* <img onClick={handleClick1} src={desData.img1} alt="" />
+                <img onClick={handleClick1} src={desData.img1} alt="" />
                 <img onClick={handleClick2} src={desData.img2} alt="" />
-                <img onClick={handleClick3} src={desData.img3} alt="" /> */}
+                <img onClick={handleClick3} src={desData.img3} alt="" />
               </div>
             </div>
             <div className={styles.main_div2}>
@@ -291,9 +291,9 @@ const Desc = () => {
           </div>
 
           <div className={styles.slider_1}>
-            {/* <Heading as="h4" size="md">
+            <Heading as="h4" size="md">
               Frequently Bought Together
-            </Heading> */}
+            </Heading>
             <Slider {...settings}>
               {slider.map((el) => {
                 return (

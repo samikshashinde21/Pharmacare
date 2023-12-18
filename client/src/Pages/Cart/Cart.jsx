@@ -309,9 +309,9 @@ const Cart = () => {
               <div></div>
               <div className={styles.slider}>
                 <div className={styles.slider_1}>
-                  <Heading as="h4" size="md">
+                  {/* <Heading as="h4" size="md">
                     Customers who bought above items also bought
-                  </Heading>
+                  </Heading> */}
                   <Slider {...settings}>
                     {slider.map((el) => {
                       return (
@@ -389,7 +389,7 @@ const Cart = () => {
             </div>
             <div className={styles.right}>
               <div>
-                <Button
+                {/* <Button
                   size="lg"
                   width="20rem"
                   color="teal"
@@ -400,7 +400,7 @@ const Cart = () => {
                   <IoIosArrowForward
                     style={{ marginLeft: "1.5rem", width: "4vh" }}
                   />
-                </Button>
+                </Button> */}
               </div>
               <div>
                 <Button
@@ -509,7 +509,7 @@ const Cart = () => {
                 alt=""
               />
               <Heading as="h4" size="md">
-                1 Lakh+Products
+              Quality Products
               </Heading>
               <p>
                 We maintain strict quality <br />

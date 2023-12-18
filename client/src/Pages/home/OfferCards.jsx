@@ -9,11 +9,11 @@ const OfferCards = () => {
         <div style={{ flex: "1.5" }}>
           <div style={{ backgroundColor: "#cff0ea" }}>
             <div className={styles.discount}>FLAT 15% OFF</div>
-            <div className={styles.heading}>Order Medicines</div>
+            <div className={styles.heading}>All Products</div>
           </div>
           <div>
             <button
-              onClick={() => navigate("/orderMed")}
+              onClick={() => navigate("/allproducts")}
               className={styles.btn}
             >
               Order Now
@@ -35,7 +35,7 @@ const OfferCards = () => {
         <div style={{ flex: "1.5" }}>
           <div style={{ backgroundColor: "#fdf2d2" }}>
             <div className={styles.discount}>UPTO 60% OFF</div>
-            <div className={styles.heading}>Healthcare Products</div>
+            <div className={styles.heading}>Categories</div>
           </div>
           <div>
             <button
@@ -43,7 +43,7 @@ const OfferCards = () => {
               onClick={() => navigate("/healthcare")}
               className={styles.btn}
             >
-              Order Now
+              Explore
             </button>
           </div>
         </div>

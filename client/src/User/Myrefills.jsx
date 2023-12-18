@@ -87,7 +87,7 @@ const Myrefills = () => {
               alt="Dan Abramov"
             />
             <Heading as="h4" size="md" mt="1rem">
-              {/* 1 Lakh+ Products */}
+              Quality Products
             </Heading>
             <Text fontSize={"lg"} textAlign="left" mt="1rem" color={"gray"}>
               We maintain strict quality controls on all our partner retailers,
@@ -104,7 +104,7 @@ const Myrefills = () => {
               alt="Dan Abramov"
             />
             <Heading as="h4" size="md" mt="1rem">
-              
+              Secured Payments
             </Heading>
             <Text fontSize={"lg"} textAlign="left" mt="1rem" color={"gray"}>
               100% secure and trusted payment protection.
