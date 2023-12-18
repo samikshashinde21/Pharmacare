@@ -4,6 +4,7 @@ const productModel = require("../models/product");
 const orderModel = require("../models/order");
 
 const addCart = async (req, res) => {
+  console.log(req.body)
   const { productId, qty, user_id } = req.body;
   try {
     if (qty && productId && user_id) {

@@ -99,6 +99,7 @@ const Desc = () => {
   var UserId = localStorage.getItem("user_id");
 
   const handleAddToCart = async () => {
+    console.log("hihihihih");
     const res = await axios.post(
       "http://localhost:4000/api/cart",
       {
@@ -149,7 +150,7 @@ const Desc = () => {
           <div className={styles.outer_div_1}>
             <div className={styles.main_div1}>
               <div className={styles.desc_img_div1}>
-                <img src={desData.img1} alt="" />
+                <img src={desData.img1} alt="" /> 
               </div>
               <div className={styles.desc_img_div2}>
                 {/* <img onClick={handleClick1} src={desData.img1} alt="" />
@@ -197,15 +198,15 @@ const Desc = () => {
               <p>Delivery by Tommorrow, before 10.00 pm</p>
             </div>
             <div className={styles.main_div3}>
-              <Button
+              <Select
                 onClick={handleAddToCart}
-                // placeholder="Add to cart"
+                placeholder="Quantity"
                 color="white"
                 w="9rem"
                 backgroundColor="teal"
                 onChange={(e) => setVal(e.target.value)}
-              >Add to cart
-                {/* <option style={{ color: "black" }} value="1">
+              >              
+                <option style={{ color: "black" }} value="1">
                   1
                 </option>
                 <option style={{ color: "black" }} value="2">
@@ -234,8 +235,8 @@ const Desc = () => {
                 </option>
                 <option style={{ color: "black" }} value="10">
                   10
-                </option> */}
-              </Button>
+                </option> 
+              </Select>
             </div>
 
             <div className={styles.main_div4}>

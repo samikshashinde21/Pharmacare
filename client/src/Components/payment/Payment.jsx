@@ -56,7 +56,9 @@ function Payment() {
       console.log(error);
     }
   };
-  return <div className="App"></div>;
+  return <div className="App">
+
+  </div>;
 }
 
 export default Payment;

@@ -39,11 +39,26 @@ const productGetSearch = async (req, res) => {
   }
 };
 
+// const singleProduct = async (req, res) => {
+//   const { title } = req.params;
+
+//   const data = await productModel.findOne({
+//     title: { $regex: new RegExp(`${title}`), $options: "gi" },
+//   });
+
+//   if (data) {
+//     return res.send(data);
+//   }
+
+//   return res.sendStatus(404);
+// };
+
+
 const singleProduct = async (req, res) => {
   const { title } = req.params;
 
   const data = await productModel.findOne({
-    title: { $regex: new RegExp(`${title}`), $options: "gi" },
+    title: title,
   });
 
   if (data) {
