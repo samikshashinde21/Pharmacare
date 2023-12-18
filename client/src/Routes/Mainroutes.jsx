@@ -20,6 +20,7 @@ import Myprofile from "../User/Myprofile";
 import Refer from "../User/Refer";
 import Payment from "../Components/payment/Payment";
 import ThankYou from "../Components/payment/ThankYou";
+import ProductList from "../ProductList"; 
 
 const Mainroutes = () => {
   return (
@@ -46,6 +47,7 @@ const Mainroutes = () => {
         <Route path="/refer" element={<Refer />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/thnx-you-paid" element={<ThankYou />} />
+        <Route path="/allproducts" element={<ProductList />} />
       </Routes>
       <Footer />
     </div>

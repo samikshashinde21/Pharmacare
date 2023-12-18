@@ -1,0 +1,39 @@
+/* ProductCard.css */
+.card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+  width: 250px;
+  height: 350px;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.discount {
+  background-color: #ff6347;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Container for the product image */
+.image-container {
+  height: 60%; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Product image styles */
+.card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Choose 'cover', 'contain', or other values based on your preference */
+}

@@ -1,0 +1,10 @@
+/* ProductList.module.css */
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.productList:hover {
+    cursor: pointer;
+  }
+    
