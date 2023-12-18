@@ -56,15 +56,15 @@ const options = [
     value: "Pan 40mg Strip of 15 Tablets",
     label: "Pan 40mg Strip of 15 Tablets",
   },
-  {
-    value: "Pharmeasy Multivitamin",
-    label: "Pharmeasy Multivitamin",
-  },
+  // {
+  //   value: "Pharmeasy Multivitamin",
+  //   label: "Pharmeasy Multivitamin",
+  // },
   {
     value: "Ecosprin 75mg Strip Of 14 Tablets",
     label: "Ecosprin 75mg Strip Of 14 Tablets",
   },
-  { value: "Pharmeasy Multivitamin", label: "Pharmeasy Multivitamin" },
+  // { value: "Pharmeasy Multivitamin", label: "Pharmeasy Multivitamin" },
   {
     value: "Grd Chocolate Whey Protein Refill Of 400 G",
     label: "Grd Chocolate Whey Protein Refill Of 400 G",
@@ -82,15 +82,15 @@ const options = [
     value: "Supradyn Daily Multivitamin Tablets 15s",
     label: "Supradyn Daily Multivitamin Tablets 15s",
   },
-  {
-    value: "Pharmeasy Multivitamin",
-    label: "Pharmeasy Multivitamin",
-  },
+  // {
+  //   value: "Pharmeasy Multivitamin",
+  //   label: "Pharmeasy Multivitamin",
+  // },
   {
     value: "Calcimax Forte Plus Strip Of 30 Tablets",
     label: "Calcimax Forte Plus Strip Of 30 Tablets",
   },
-  { value: "Pharmeasy Multivitamin", label: "Pharmeasy Multivitamin" },
+  // { value: "Pharmeasy Multivitamin", label: "Pharmeasy Multivitamin" },
   {
     value: "Ecosprin 75mg Strip Of 14 Tablets",
     label: "Ecosprin 75mg Strip Of 14 Tablets",
@@ -347,13 +347,13 @@ const Navbar = () => {
                       >
                         My Profile
                       </MenuItem>
-                      <MenuItem
+                      {/* <MenuItem
                         onClick={() => navigate("/wallet")}
                         color="black"
                         _hover={{ color: "teal.500" }}
                       >
                         Wallet
-                      </MenuItem>
+                      </MenuItem> */}
                       <MenuItem
                         onClick={() => navigate("/refer")}
                         color="black"
@@ -361,13 +361,13 @@ const Navbar = () => {
                       >
                         Refer & Earn
                       </MenuItem>
-                      <MenuItem
+                      {/* <MenuItem
                         onClick={() => navigate("/")}
                         color="black"
                         _hover={{ color: "teal.500" }}
                       >
                         Notification
-                      </MenuItem>
+                      </MenuItem> */}
                       <MenuItem
                         onClick={() => {
                           localStorage.removeItem("user_id");

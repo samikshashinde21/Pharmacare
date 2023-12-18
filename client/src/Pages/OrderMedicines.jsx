@@ -36,22 +36,22 @@ const options = [
     v2: "Home Care",
     label: "Pan 40mg Strip of 15 Tablets",
   },
-  {
-    value: "Pharmeasy Multivitamin",
-    v2: "Beauty",
-    label: "Pharmeasy Multivitamin",
-  },
+  // {
+  //   value: "Pharmeasy Multivitamin",
+  //   v2: "Beauty",
+  //   label: "Pharmeasy Multivitamin",
+  // },
   // { value: 'Dolo 650mg Stip Of 15 Tablets',v2:"Skin Care", label: 'Dolo 650mg Stip Of 15 Tablets' },
   {
     value: "Ecosprin 75mg Strip Of 14 Tablets",
     v2: "Sexual Wellness",
     label: "Ecosprin 75mg Strip Of 14 Tablets",
   },
-  {
-    value: "Pharmeasy Multivitamin",
-    v2: "Personal Care",
-    label: "Pharmeasy Multivitamin",
-  },
+  // {
+  //   value: "Pharmeasy Multivitamin",
+  //   v2: "Personal Care",
+  //   label: "Pharmeasy Multivitamin",
+  // },
   {
     value: "Ecosprin 75mg Strip Of 14 Tablets",
     v2: "Skin Care",
@@ -165,7 +165,7 @@ const OrderMedicines = () => {
                   </Heading>
                 </div>
                 <div className={styles.select}>
-                  <input type="text" placeholder="Select Pincode" />
+                  {/* <input type="text" placeholder="Select Pincode" /> */}
                   <Select
                     onChange={(values) => setVal(values)}
                     placeholder="Search medicines/Healthcare products"

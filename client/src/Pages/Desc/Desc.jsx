@@ -152,9 +152,9 @@ const Desc = () => {
                 <img src={desData.img1} alt="" />
               </div>
               <div className={styles.desc_img_div2}>
-                <img onClick={handleClick1} src={desData.img1} alt="" />
+                {/* <img onClick={handleClick1} src={desData.img1} alt="" />
                 <img onClick={handleClick2} src={desData.img2} alt="" />
-                <img onClick={handleClick3} src={desData.img3} alt="" />
+                <img onClick={handleClick3} src={desData.img3} alt="" /> */}
               </div>
             </div>
             <div className={styles.main_div2}>
@@ -197,15 +197,15 @@ const Desc = () => {
               <p>Delivery by Tommorrow, before 10.00 pm</p>
             </div>
             <div className={styles.main_div3}>
-              <Select
+              <Button
                 onClick={handleAddToCart}
-                placeholder="Add to Cart"
+                // placeholder="Add to cart"
                 color="white"
                 w="9rem"
                 backgroundColor="teal"
                 onChange={(e) => setVal(e.target.value)}
-              >
-                <option style={{ color: "black" }} value="1">
+              >Add to cart
+                {/* <option style={{ color: "black" }} value="1">
                   1
                 </option>
                 <option style={{ color: "black" }} value="2">
@@ -234,8 +234,8 @@ const Desc = () => {
                 </option>
                 <option style={{ color: "black" }} value="10">
                   10
-                </option>
-              </Select>
+                </option> */}
+              </Button>
             </div>
 
             <div className={styles.main_div4}>
@@ -253,7 +253,7 @@ const Desc = () => {
                   colorScheme="teal"
                   size="lg"
                   width="20rem"
-                >
+                > 
                   View Cart{" "}
                   <IoIosArrowForward
                     style={{ marginLeft: "1.5rem", width: "4vh" }}
@@ -279,10 +279,10 @@ const Desc = () => {
                 <div
                   style={{ display: "flex", marginTop: "1rem", gap: "10px" }}
                 >
-                  <img
-                    src="https://cms-contents.pharmeasy.in/offer/94fa2133c15-Plum_logo2.jpg"
+                  {/* <img
+                    // src="https://cms-contents.pharmeasy.in/offer/94fa2133c15-Plum_logo2.jpg"
                     alt=""
-                  />
+                  /> */}
                   <p>Get Flat 50% off on Plum</p>
                 </div>
               </div>
@@ -290,9 +290,9 @@ const Desc = () => {
           </div>
 
           <div className={styles.slider_1}>
-            <Heading as="h4" size="md">
+            {/* <Heading as="h4" size="md">
               Frequently Bought Together
-            </Heading>
+            </Heading> */}
             <Slider {...settings}>
               {slider.map((el) => {
                 return (

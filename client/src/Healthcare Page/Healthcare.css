@@ -1,7 +1,7 @@
 
 .slider{
     position: relative;
-    width: 81%;
+    width: 85%;
     display: flex;
     margin: 2rem auto 2rem auto;
     justify-content: center;
@@ -9,8 +9,8 @@
     opacity:1;
 }
 .sliderimage{
-    width: 81rem;
-    height:15rem;
+    width: 85rem;
+    height:25rem;
 }
 .heading{
     margin-top: 1rem;

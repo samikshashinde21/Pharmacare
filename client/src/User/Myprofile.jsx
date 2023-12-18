@@ -122,14 +122,14 @@ const Myprofile = () => {
               Manage Refunds{" "}
             </Text>
             <Divider m="1rem" />
-            <Heading display={"flex"} fontSize="lg" m={"1rem"}>
+            {/* <Heading display={"flex"} fontSize="lg" m={"1rem"}>
               <Image
                 mr="1rem"
                 src="https://assets.pharmeasy.in/web-assets/dist/ab7afe51.svg"
               />
               Wallet
             </Heading>
-            <Divider m="1rem" />
+            <Divider m="1rem" /> */}
             <Heading display={"flex"} fontSize="lg" m={"1rem"}>
               <Image
                 mr="1rem"

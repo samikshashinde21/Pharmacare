@@ -345,7 +345,7 @@ const Cart = () => {
                                 margin="auto"
                                 width="25vh"
                                 onChange={(e) => setVal(e.target.value)}
-                                placeholder="Add to Cart"
+                                placeholder="Add to cart"
                               >
                                 <option style={{ color: "black" }} value="1">
                                   1

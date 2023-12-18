@@ -1,5 +1,6 @@
 import Slider from "react-slick";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+// import slider_img from "../assets/slider_img.jpg";
 
 function NextArrow(props) {
   const { className, style, onClick } = props;
@@ -66,31 +67,31 @@ const TopSlider = () => {
           <div>
             <img
               style={{ width: "100%" }}
-              src="https://cms-contents.pharmeasy.in/banner/c414a98e027-dwebjpg.jpg?dim=1440x0&dpr=1&q=100"
+              src="https://onemg.gumlet.io/4acb8fba-e1db-4476-b36c-9aa4c5b09290_1702377120.jpg?w=1013&h=250&format=auto"
               alt=""
             />
           </div>
           <div>
             <img
               style={{ width: "100%" }}
-              src="https://cms-contents.pharmeasy.in/banner/3f636edf697-GRAND1000_Dweb.jpg?dim=1440x0&dpr=1&q=100"
+              src="https://onemg.gumlet.io/71ee04a4-ec19-4267-8efd-cd59901623d5_1701342578.jpg?w=1013&h=250&format=auto"
               alt=""
             />
           </div>
           <div>
             <img
               style={{ width: "100%" }}
-              src="https://cms-contents.pharmeasy.in/banner/4a92d1f76bf-Get_end_to_end.jpg?dim=1440x0&dpr=1&q=100"
+              src="https://onemg.gumlet.io/3ec82d3d-8cd3-4611-b276-4daaa27bf60b_1702798478.png?w=1013&h=250&format=auto"
               alt=""
             />
           </div>
-          <div>
+          {/* <div>
             <img
               style={{ width: "100%" }}
-              src="https://cms-contents.pharmeasy.in/banner/31e6940d27f-WP.jpg?dim=1440x0&dpr=1&q=100"
+              src={slider_img}
               alt=""
             />
-          </div>
+          </div> */}
         </Slider>
       </div>
     </div>
