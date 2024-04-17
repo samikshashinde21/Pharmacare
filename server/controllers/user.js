@@ -30,7 +30,7 @@ const userMail = async (req, res) => {
       const template = hbs.compile(content);
 
       const otp = Math.floor(1000 + Math.random() * 9000);
-      await userModel.updateOne({ _id: newUser._id }, { $push: { otp: otp } });
+      await userModel.updateOne({ _id: newUser._id }, { $push: { otp: otp } }); //first otp is db, second otp is the value from the frontend
 
       await transport.sendMail({
         from: process.env.EMAIL,
@@ -110,4 +110,4 @@ async function userVerify(req, res) {
   }
 }
 
-module.exports = { userMail, userVerify };
+module.exports = { userMail, userVerify }; 

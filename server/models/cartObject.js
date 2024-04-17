@@ -12,6 +12,6 @@ const cartObjectSchema = new Schema(
   }
 );
 
-const cartObjectModel = model("cartObject", cartObjectSchema);
+const cartObjectModel = model("cartobjects", cartObjectSchema);
 
 module.exports = cartObjectModel;

@@ -14,6 +14,6 @@ const orderSchema = new Schema(
   }
 );
 
-const orderModel = model("order", orderSchema);
+const orderModel = model("orders", orderSchema);
 
 module.exports = orderModel;

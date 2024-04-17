@@ -1,5 +1,6 @@
-import styles from "./navbar.module.css";
-import oxanto_logo from "../assets/oxanto_logo.png";
+import styles from "./navbar.module.css"
+import oxanto_logo from "../assets/oxanto_logo.png"
+import pharmacare from "../navbar/PharmaCare.png"
 import {
   // Box,
   Button,
@@ -28,20 +29,20 @@ import {
   Text,
   useDisclosure,
   useToast,
-} from "@chakra-ui/react";
-import {  SearchIcon } from "@chakra-ui/icons";
+} from "@chakra-ui/react"
+import { SearchIcon } from "@chakra-ui/icons"
 // import { ArrowDownIcon } from "@chakra-ui/icons";
-import SelectPin from "./SelectPin";
-import Select from "react-select";
-import { useContext, useRef, useState } from "react";
+import SelectPin from "./SelectPin"
+import Select from "react-select"
+import { useContext, useRef, useState } from "react"
 // import { TbDiscount2 } from "react-icons/tb";
-import { RiUser5Fill } from "react-icons/ri";
-import { HiShoppingCart } from "react-icons/hi";
-import { FiMail } from "react-icons/fi";
-import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../Context/AuthContext";
-import { useEffect } from "react";
+import { RiUser5Fill } from "react-icons/ri"
+import { HiShoppingCart } from "react-icons/hi"
+import { FiMail } from "react-icons/fi"
+import axios from "axios"
+import { Link, useNavigate } from "react-router-dom"
+import { AuthContext } from "../../Context/AuthContext"
+import { useEffect } from "react"
 
 const options = [
   {
@@ -49,12 +50,16 @@ const options = [
     label: "Episoft cleansing lotion",
   },
   {
-    value: "Venusia Max Intensive Moisturizing Lotion, Repairs Dry Skin, Provides Soft & Smooth Skin, 300gm",
-    label: "Venusia Max Intensive Moisturizing Lotion, Repairs Dry Skin, Provides Soft & Smooth Skin, 300gm",
+    value:
+      "Venusia Max Intensive Moisturizing Lotion, Repairs Dry Skin, Provides Soft & Smooth Skin, 300gm",
+    label:
+      "Venusia Max Intensive Moisturizing Lotion, Repairs Dry Skin, Provides Soft & Smooth Skin, 300gm",
   },
   {
-    value: "Veet Pure Hair Removal Cream For Women With No Ammonia Smell, Sensitive Skin - 50 G",
-    label: "Veet Pure Hair Removal Cream For Women With No Ammonia Smell, Sensitive Skin - 50 G",
+    value:
+      "Veet Pure Hair Removal Cream For Women With No Ammonia Smell, Sensitive Skin - 50 G",
+    label:
+      "Veet Pure Hair Removal Cream For Women With No Ammonia Smell, Sensitive Skin - 50 G",
   },
   // {
   //   value: "Pharmeasy Multivitamin",
@@ -75,37 +80,45 @@ const options = [
     label: "La Shield Fisico Sunscreen Spf 50 Matte Tube Of 50 G",
   },
   {
-    value: "Dettol Intense Cool Bathing Soap Bar With Menthol- Buy 4 Get 1 Free - 125g Each",
-    label: "Dettol Intense Cool Bathing Soap Bar With Menthol- Buy 4 Get 1 Free - 125g Each",
+    value:
+      "Dettol Intense Cool Bathing Soap Bar With Menthol- Buy 4 Get 1 Free - 125g Each",
+    label:
+      "Dettol Intense Cool Bathing Soap Bar With Menthol- Buy 4 Get 1 Free - 125g Each",
   },
   {
-    value: "Lacto Calamine Daily Cleansing Face Wipes With Aloe Vera Cucumber And Vitamin E - 25 Wipes",
-    label: "Lacto Calamine Daily Cleansing Face Wipes With Aloe Vera Cucumber And Vitamin E - 25 Wipes",
+    value:
+      "Lacto Calamine Daily Cleansing Face Wipes With Aloe Vera Cucumber And Vitamin E - 25 Wipes",
+    label:
+      "Lacto Calamine Daily Cleansing Face Wipes With Aloe Vera Cucumber And Vitamin E - 25 Wipes",
   },
   {
-    value: "Ezee Bio-Degradable Large Garbage Bags (24 X 32 Inches) Packet Of 15",
-    label: "Ezee Bio-Degradable Large Garbage Bags (24 X 32 Inches) Packet Of 15",
+    value:
+      "Ezee Bio-Degradable Large Garbage Bags (24 X 32 Inches) Packet Of 15",
+    label:
+      "Ezee Bio-Degradable Large Garbage Bags (24 X 32 Inches) Packet Of 15",
   },
   {
     value: "Baby Dove Rich Moisture Wipes 50 Pcs",
     label: "Baby Dove Rich Moisture Wipes 50 Pcs",
   },
-  { value: "Dettol Disinfectant Sanitizer Spray Bottle -Spring Blossom, 225ml)", 
-    label: "Dettol Disinfectant Sanitizer Spray Bottle -Spring Blossom, 225ml)" },
+  {
+    value: "Dettol Disinfectant Sanitizer Spray Bottle -Spring Blossom, 225ml)",
+    label: "Dettol Disinfectant Sanitizer Spray Bottle -Spring Blossom, 225ml)",
+  },
   {
     value: "D Acne Soft Foaming Face Wash Tube Of 100 G",
     label: "D Acne Soft Foaming Face Wash Tube Of 100 G",
   },
 
   {
-    value:
-      "Dettol Antiseptic Liquid Bottle Of 550 Ml",
-    label:
-      "Dettol Antiseptic Liquid Bottle Of 550 Ml",
+    value: "Dettol Antiseptic Liquid Bottle Of 550 Ml",
+    label: "Dettol Antiseptic Liquid Bottle Of 550 Ml",
   },
   {
-    value: "Godrej Good Knight Gold Flash Mosquito Repellent (Machine + 2 Refills) - Combo Pack-1 Unit",
-    label: "Godrej Good Knight Gold Flash Mosquito Repellent (Machine + 2 Refills) - Combo Pack-1 Unit",
+    value:
+      "Godrej Good Knight Gold Flash Mosquito Repellent (Machine + 2 Refills) - Combo Pack-1 Unit",
+    label:
+      "Godrej Good Knight Gold Flash Mosquito Repellent (Machine + 2 Refills) - Combo Pack-1 Unit",
   },
   {
     value: "Lizol Floral Disinfectant Floor Cleaner Liquid Bottle Of 200 Ml",
@@ -120,10 +133,8 @@ const options = [
     label: "Domex Disinfectant Expert Toilet Cleaner - 500 Ml",
   },
   {
-    value:
-      "Luxor Nano Mobile Disinfectant Cleaner - 10ml On-The-Go",
-    label:
-      "Luxor Nano Mobile Disinfectant Cleaner - 10ml On-The-Go",
+    value: "Luxor Nano Mobile Disinfectant Cleaner - 10ml On-The-Go",
+    label: "Luxor Nano Mobile Disinfectant Cleaner - 10ml On-The-Go",
   },
   {
     value:
@@ -131,7 +142,7 @@ const options = [
     label:
       "Dettol Liquid Disinfectant For Floor Cleaner, Surface Disinfection Personal Hygiene Lime Fresh 500ml",
   },
-];
+]
 
 const customStyles = {
   control: (provided, state) => ({
@@ -160,98 +171,95 @@ const customStyles = {
     ...provided,
     height: "3rem",
   }),
-};
+}
 const Navbar = () => {
-  const [val, setVal] = useState("");
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [email, setEmail] = useState("");
-  const btnRef = useRef();
-  const [otpState, setOtpState] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [otp1, setOtp1] = useState(0);
-  const [otp2, setOtp2] = useState(0);
-  const [otp3, setOtp3] = useState(0);
-  const [otp4, setOtp4] = useState(0);
-  const [emptyError, setEmptyError] = useState(false);
-  const toast = useToast();
-  const value = useContext(AuthContext);
-  const navigate = useNavigate();
+  const [val, setVal] = useState("")
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [email, setEmail] = useState("")
+  const btnRef = useRef()
+  const [otpState, setOtpState] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [otp1, setOtp1] = useState(0)
+  const [otp2, setOtp2] = useState(0)
+  const [otp3, setOtp3] = useState(0)
+  const [otp4, setOtp4] = useState(0)
+  const [emptyError, setEmptyError] = useState(false)
+  const toast = useToast()
+  const value = useContext(AuthContext)
+  const navigate = useNavigate()
 
   const handleChange = (values) => {
-    setVal(values);
-  };
+    setVal(values)
+  }
 
-  var details = val.value;
+  var details = val.value
 
   useEffect(() => {
     if (details) {
-      navigate(`/productdetails/${details}`);
+      navigate(`/productdetails/${details}`)
     }
-  }, [details]);
+  }, [details])
 
   const sendMail = async (mail) => {
-    setLoading(true);
+    setLoading(true)
     try {
-      const res = await axios.post(
-        "http://localhost:4000/api/user/mail",
-        {
-          mail,
-        }
-      );
-      localStorage.setItem("user_id", res.data.id);
-      setOtpState(true);
-      setLoading(false);
+      const res = await axios.post("http://localhost:4000/api/user/mail", {
+        mail,
+      })
+      localStorage.setItem("user_id", res.data.id)
+      setOtpState(true)
+      setLoading(false)
     } catch (err) {
-      setOtpState(false);
-      setLoading(false);
+      setOtpState(false)
+      setLoading(false)
       toast({
         title: `Try Again`,
         status: "error",
         isClosable: true,
-      });
+      })
     }
-  };
+  }
   const sendOtp = async () => {
-    setLoading(true);
+    setLoading(true)
     try {
-      let otp = "";
-      otp += otp1 + otp2 + otp3 + otp4;
-      const user_id = localStorage.getItem("user_id");
-      console.log("Before sending OTP request");
+      let otp = ""
+      otp += otp1 + otp2 + otp3 + otp4
+      const user_id = localStorage.getItem("user_id")
+      console.log("Before sending OTP request")
       const res = await axios.post(
         `http://localhost:4000/api/user/verify/${user_id}`,
         { otp: Number(otp) }
-      );
-      console.log("After sending OTP request", res);
+      )
+      console.log("After sending OTP request", res)
       if (res.status === 200) {
-        onClose();
-        setLoading(false);
-        localStorage.setItem("logIn", true);
-        value.setAuthState(true);
+        onClose()
+        setLoading(false)
+        localStorage.setItem("logIn", true)
+        value.setAuthState(true)
         toast({
           title: `User LoggedIn successfully`,
           status: "success",
           isClosable: true,
-        });
+        })
       }
     } catch (err) {
       toast({
         title: `Otp is Wrong`,
         status: "error",
         isClosable: true,
-      }); 
-      setLoading(false);
+      })
+      setLoading(false)
     }
-  };
+  }
 
   return (
     <div className={styles.container}>
       <div
         onClick={() => {
-          navigate("/");
+          navigate("/")
         }}
       >
-         <img src={oxanto_logo} alt="" className={styles.image}/>
+        <img src={pharmacare} alt="" className={styles.image} />
         {/* <Text className={styles.text}>  
         Oxanto LifeSciences
       </Text> */}
@@ -371,9 +379,9 @@ const Navbar = () => {
                       </MenuItem> */}
                       <MenuItem
                         onClick={() => {
-                          localStorage.removeItem("user_id");
-                          localStorage.removeItem("logIn");
-                          value.setAuthState(false);
+                          localStorage.removeItem("user_id")
+                          localStorage.removeItem("logIn")
+                          value.setAuthState(false)
                         }}
                         color="black"
                         _hover={{ color: "teal.500" }}
@@ -394,25 +402,25 @@ const Navbar = () => {
                     <DrawerContent>
                       <DrawerCloseButton />
                       {/* <DrawerHeader> */}
-                        {/* <Flex bg="teal.500" height="100px"> */}
-                          {/* <Box marginTop={"1rem"} marginLeft={"1rem"}> */}
-                            {/* <h1 color={"white"} fontSize={"12"}>Oxanto LifeSciences</h1> */}
-                            {/* <Image
+                      {/* <Flex bg="teal.500" height="100px"> */}
+                      {/* <Box marginTop={"1rem"} marginLeft={"1rem"}> */}
+                      {/* <h1 color={"white"} fontSize={"12"}>Oxanto LifeSciences</h1> */}
+                      {/* <Image
                               src="D:/Onkar/Study/Projects/Oxanto LifeSciences/client/src/Components/assets/oxanto_logo.png"
                               alt=""
                               width={"50rem"}
                             /> */}
-                            <img src={oxanto_logo} alt="" width={"100%"}/>
-                          {/* </Box> */}
+                      <img src={pharmacare} alt="" width={"100%"} />
+                      {/* </Box> */}
 
-                          {/* <Box marginTop={"1rem"} marginLeft={"3rem"}>
+                      {/* <Box marginTop={"1rem"} marginLeft={"3rem"}>
                             <Image
                               src="	https://assets.pharmeasy.in/web-assets/dist/1fe1322a.svg"
                               alt=""
                               width={"8rem"}
                             />
                           </Box> */}
-                        {/* </Flex> */}
+                      {/* </Flex> */}
                       {/* </DrawerHeader> */}
                       {otpState ? (
                         <DrawerBody>
@@ -437,12 +445,12 @@ const Navbar = () => {
                           </HStack>
                           <Button
                             onClick={() => {
-                              let otp = "";
-                              otp += otp1 + otp2 + otp3 + otp4;
+                              let otp = ""
+                              otp += otp1 + otp2 + otp3 + otp4
                               if (otp !== "") {
-                                sendOtp();
+                                sendOtp()
                               } else {
-                                setEmptyError(true);
+                                setEmptyError(true)
                               }
                             }}
                             isLoading={loading ? true : false}
@@ -473,9 +481,9 @@ const Navbar = () => {
                           <Button
                             onClick={() => {
                               if (email !== "") {
-                                sendMail(email);
+                                sendMail(email)
                               } else {
-                                setEmptyError(true);
+                                setEmptyError(true)
                               }
                             }}
                             isLoading={loading ? true : false}
@@ -501,7 +509,11 @@ const Navbar = () => {
 
             <Flex>
               <HiShoppingCart
-                style={{ cursor:"pointer", marginTop: "0.2rem", marginRight: "0.4rem" }}
+                style={{
+                  cursor: "pointer",
+                  marginTop: "0.2rem",
+                  marginRight: "0.4rem",
+                }}
                 size="23px"
               />
               <Link to="/cart">Cart</Link>
@@ -510,7 +522,7 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export { Navbar };
+export { Navbar }
